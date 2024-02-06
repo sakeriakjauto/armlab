@@ -1,0 +1,35 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storeName": {
+            "type": "string",
+            "metadata": {
+                "description": "description"
+            }
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+    
+    {
+        "type": "Microsoft.Resources/deployments",
+        "apiVersion": "2021-04-01",
+        "name": "linkedTemplate",
+        "properties": {
+            "mode": "Incremental",
+        
+        "templateLink": {
+            "uri": "https://gist.githubusercontent.com/goyalmohit/ca70159ad70daa34b152b31198d1fbbe/raw/5b9d3b436200c7c0102c34cc5954e90d5c88ff08/arm-template-storage-account.json"
+        }
+
+        }
+
+        
+    }
+
+
+    ],
+    "outputs": {}
+}
